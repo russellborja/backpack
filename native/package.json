@@ -39,5 +39,8 @@
         "lines": 75
       }
     }
+  },
+  "dependencies": {
+    "react-native-material-textfield": "^0.10.2"
   }
 }

@@ -1,5 +1,7 @@
 import React from 'react';
+import BpkIcon from 'react-native-bpk-component-icon';
 import { storiesOf } from '@storybook/react-native';
+import { TextField } from 'react-native-material-textfield';
 import { StyleSheet, View, Platform } from 'react-native';
 import { StorySubheading } from '../../storybook/TextStyles';
 import BpkTextInput from './index';
@@ -12,6 +14,23 @@ const tokens = Platform.select({
 const {
   spacingBase,
   spacingXs,
+  borderRadiusSm,
+  borderSizeSm,
+  colorGray100,
+  colorGray300,
+  colorGray700,
+  colorGreen500,
+  colorRed500,
+  spacingLg,
+  spacingMd,
+  spacingSm,
+  spacingXl,
+  textLgFontSize,
+  textLgFontWeight,
+  textLgLineHeight,
+  textXsFontSize,
+  textXsFontWeight,
+  textXsLineHeight,
 } = tokens;
 
 const styles = StyleSheet.create({
@@ -20,6 +39,9 @@ const styles = StyleSheet.create({
   },
   input: {
     marginBottom: spacingBase,
+  },
+  labelTextStyle: {
+    color: colorGray700,
   },
 });
 
@@ -194,4 +216,68 @@ storiesOf('BpkTextInput', module)
         value="+441234567890"
       />
     </View>
-  ));
+  ))
+  .add('New Version', () => {
+    function errorIcon() {
+      return (
+        <BpkIcon
+          icon="exclamation-circle"
+          style={{ color: tokens.colorRed500 }}
+        />
+      );
+    }
+    function validIcon() {
+      return (
+        <BpkIcon
+          icon="tick"
+          style={{ color: tokens.colorGreen500 }}
+        />
+      );
+    }
+    return (
+      <View>
+        <StorySubheading>Normal</StorySubheading>
+        <TextField
+          label="Normal"
+          value="Value"
+          tintColor={tokens.colorBlue500}
+          baseColor={tokens.colorGray700}
+          labelTextStyle={{ color: colorGray700 }}
+
+        />
+        <StorySubheading>Placeholder</StorySubheading>
+        <TextField
+          label="Placeholder"
+          value=""
+          tintColor={tokens.colorBlue500}
+          baseColor={tokens.colorGray100}
+          labelTextStyle={{ color: colorGray700 }}
+
+        />
+        <StorySubheading>Error</StorySubheading>
+
+        <TextField
+          label="Error"
+          value=""
+          error=" "
+          renderAccessory={errorIcon}
+          errorColor={tokens.colorRed500}
+          tintColor={tokens.colorBlue500}
+          baseColor={tokens.colorGray100}
+          labelTextStyle={{ color: colorGray700 }}
+
+        />
+        <StorySubheading>Valid</StorySubheading>
+
+        <TextField
+          label="Success"
+          value="Value"
+          renderAccessory={validIcon}
+          tintColor={tokens.colorBlue500}
+          baseColor={tokens.colorGray100}
+          labelTextStyle={{ color: colorGray700 }}
+
+        />
+      </View>
+    );
+  });
