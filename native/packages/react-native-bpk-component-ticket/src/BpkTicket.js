@@ -39,6 +39,7 @@ const {
   elevationXs,
   elevationLg,
   borderRadiusSm,
+  borderRadiusPill,
   spacingSm,
   spacingMd,
   spacingBase,
@@ -54,27 +55,33 @@ const {
   shadowXlRadius,
 } = tokens;
 
-/**
- * Define styles needed by the component
- */
+
+const surface = {
+  backgroundColor: colorWhite,
+  borderRadius: borderRadiusSm,
+  elevation: elevationXs,
+  shadowColor: shadowSmColor,
+  shadowOffset: { width: shadowSmOffsetWidth, height: shadowSmOffsetHeight / PixelRatio.get() },
+  shadowOpacity: shadowSmOpacity,
+  shadowRadius: shadowSmRadius / PixelRatio.get(),
+};
+
+const surfaceFocused = {
+  elevation: elevationLg,
+  shadowColor: shadowXlColor,
+  shadowOffset: { width: shadowXlOffsetWidth, height: shadowXlOffsetHeight / PixelRatio.get() },
+  shadowOpacity: shadowXlOpacity,
+  shadowRadius: shadowXlRadius / PixelRatio.get(),
+};
+
 const styles = StyleSheet.create({
   ticket: {
-    backgroundColor: colorWhite,
-    borderRadius: borderRadiusSm,
-    elevation: elevationXs,
-    shadowColor: shadowSmColor,
-    shadowOffset: { width: shadowSmOffsetWidth, height: shadowSmOffsetHeight / PixelRatio.get() },
-    shadowOpacity: shadowSmOpacity,
-    shadowRadius: shadowSmRadius / PixelRatio.get(),
   },
   ticketFocused: {
-    elevation: elevationLg,
-    shadowColor: shadowXlColor,
-    shadowOffset: { width: shadowXlOffsetWidth, height: shadowXlOffsetHeight / PixelRatio.get() },
-    shadowOpacity: shadowXlOpacity,
-    shadowRadius: shadowXlRadius / PixelRatio.get(),
+    ...surfaceFocused,
   },
   ticketInner: {
+    padding: Platform.select({ ios: null, android: 4 }),
     flexDirection: 'row',
     backgroundColor: 'transparent', // otherwise this view's corners would bleed outwith the outer container
   },
@@ -83,6 +90,11 @@ const styles = StyleSheet.create({
   },
   ticketMain: {
     flex: 1,
+    ...surface,
+    borderTopRightRadius: 0,
+    borderBottomRightRadius: 0,
+  },
+  ticketMainFocused: {
   },
   ticketMainVertical: {
     flex: null,
@@ -90,11 +102,60 @@ const styles = StyleSheet.create({
   ticketMainPadded: {
     padding: spacingBase,
   },
-  ticketPunchline: {
-    width: 1,
-    marginTop: spacingMd,
-    marginBottom: spacingMd,
+  ticketPunchlineContainer: {
+    width: 8,
+    zIndex: 1,
+    elevation: elevationXs,
+  },
+  ticketPunchlineNotch: {
+    height: 4,
+    width: 8,
+    overflow: 'hidden',
+    elevation: elevationXs,
+  },
+  ticketPunchlineNotchShape: {
+    top: -8,
+    left: -4,
+    height: 16,
+    width: 16,
+    borderRadius: borderRadiusPill,
+    borderWidth: 4,
+    borderColor: colorWhite,
+    zIndex: 1,
+    elevation: elevationXs,
+  },
+  ticketPunchlineNotchShapeFlipped: {
+    top: null,
+    bottom: 4,
+  },
+  ticketPunchlineNotchShadow: {
+    position: 'absolute',
+    bottom: -1,
+    width: 8,
+    height: 1,
+    backgroundColor: colorWhite,
+    shadowColor: shadowSmColor,
+    shadowOffset: { width: shadowSmOffsetWidth, height: shadowSmOffsetHeight / PixelRatio.get() },
+    shadowOpacity: shadowSmOpacity,
+    shadowRadius: shadowSmRadius / PixelRatio.get(),
+  },
+  ticketPunchlineNotchShadowFlipped: {
+    top: -1,
+    bottom: null,
+  },
+  ticketPunchlineWrapper: {
+    flex: 1,
+    width: 8,
     flexDirection: 'column',
+    alignItems: 'center',
+    backgroundColor: colorWhite,
+    elevation: elevationXs,
+  },
+  ticketPunchline: {
+    flex: 1,
+    flexDirection: 'column',
+  },
+  ticketPunchlineFocused: {
   },
   ticketPunchlineVertical: {
     width: null,
@@ -106,6 +167,11 @@ const styles = StyleSheet.create({
   },
   ticketStub: {
     flex: 1,
+    ...surface,
+    borderTopLeftRadius: 0,
+    borderBottomLeftRadius: 0,
+  },
+  ticketStubFocused: {
   },
   ticketStubVertical: {
     flex: null,
@@ -144,7 +210,12 @@ const BpkTicket = (props) => {
     mainStyle.push(styles.ticketMainPadded);
     stubStyle.push(styles.ticketStubPadded);
   }
-  if (focused) { style.push(styles.ticketFocused); }
+  if (focused) {
+    style.push(styles.ticketFocused);
+    mainStyle.push(styles.ticketMainFocused);
+    punchlineStyle.push(styles.ticketPunchlineFocused);
+    stubStyle.push(styles.ticketStubFocused);
+  }
   if (userStyle) { style.push(userStyle); }
   if (userMainStyle) { mainStyle.push(userMainStyle); }
   if (userStubStyle) { stubStyle.push(userStubStyle); }
@@ -157,13 +228,25 @@ const BpkTicket = (props) => {
     >
       <View style={innerStyle}>
         <View style={mainStyle}>{children}</View>
-        <Dash
-          style={punchlineStyle}
-          dashGap={spacingSm}
-          dashLength={spacingSm}
-          dashThickness={1}
-          dashColor={colorGray100}
-        />
+        <View style={styles.ticketPunchlineContainer}>
+          <View style={styles.ticketPunchlineNotch}>
+            <View style={styles.ticketPunchlineNotchShape} />
+            <View style={styles.ticketPunchlineNotchShadow} />
+          </View>
+          <View style={styles.ticketPunchlineWrapper}>
+            <Dash
+              style={punchlineStyle}
+              dashGap={spacingSm}
+              dashLength={spacingSm}
+              dashThickness={1}
+              dashColor={colorGray100}
+            />
+          </View>
+          <View style={styles.ticketPunchlineNotch}>
+            <View style={[styles.ticketPunchlineNotchShape, styles.ticketPunchlineNotchShapeFlipped]} />
+            <View style={[styles.ticketPunchlineNotchShadow, styles.ticketPunchlineNotchShadowFlipped]} />
+          </View>
+        </View>
         <View style={stubStyle}>{stub}</View>
       </View>
     </BpkTouchableOverlay>
