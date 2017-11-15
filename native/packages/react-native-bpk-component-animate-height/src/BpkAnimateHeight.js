@@ -40,9 +40,9 @@ class BpkAnimateHeight extends React.Component {
     super(props);
 
     this.state = {
-      expanded: false,
+      expanded: this.props.expanded,
       height: new Animated.Value(0.01),
-      inTree: false,
+      inTree: this.props.expanded,
       expandAnimationInProgress: false,
     };
 
@@ -82,19 +82,20 @@ class BpkAnimateHeight extends React.Component {
 
   setExpandedHeight(event) {
     const { height } = event.nativeEvent.layout;
-    if (height !== 0) {
-      if (!this.state.expandAnimationInProgress) {
-        this.setState({
-          height: this.state.expanded ? new Animated.Value(height) : new Animated.Value(collapsedHeight),
-        });
-      } else {
-        this.setState({ expanded: true, expandAnimationInProgress: false });
-        Animated.timing(this.state.height, {
-          toValue: height,
-          duration: this.animationDuration,
-          delay: this.props.expandDelay,
-        }).start(this.onHeightAnimationComplete);
-      }
+    if (height === 0) {
+      return;
+    }
+    if (!this.state.expandAnimationInProgress) {
+      this.setState({
+        height: this.state.expanded ? new Animated.Value(height) : new Animated.Value(collapsedHeight),
+      });
+    } else {
+      this.setState({ expanded: true, expandAnimationInProgress: false });
+      Animated.timing(this.state.height, {
+        toValue: height,
+        duration: this.animationDuration,
+        delay: this.props.expandDelay,
+      }).start(this.onHeightAnimationComplete);
     }
   }
 
