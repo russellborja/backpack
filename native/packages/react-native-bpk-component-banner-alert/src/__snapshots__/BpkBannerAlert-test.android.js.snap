@@ -2198,6 +2198,54 @@ exports[`Android BpkBannerAlert should render correctly expanded 1`] = `
         </View>
       </View>
     </View>
+    <View>
+      <View
+        collapsable={undefined}
+        style={
+          Object {
+            "height": 0.01,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          onLayout={[Function]}
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "paddingBottom": 4,
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                },
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              disabled={false}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "rgb(82, 76, 97)",
+                    "fontFamily": "sans-serif",
+                    "fontSize": 14,
+                    "fontWeight": "400",
+                    "lineHeight": 20,
+                  },
+                  Object {},
+                ]
+              }
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis sagittis purus, id blandit ipsum. Pellentesque nec diam nec erat condimentum dapibus. Nunc diam augue, egestas id egestas ut, facilisis nec mi. Donec et congue odio, nec laoreet est. Integer rhoncus varius arcu, a fringilla libero laoreet at.
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
   </View>
   <View
     style={
@@ -2348,6 +2396,54 @@ exports[`Android BpkBannerAlert should render correctly expanded 1`] = `
           >
             
           </Text>
+        </View>
+      </View>
+    </View>
+    <View>
+      <View
+        collapsable={undefined}
+        style={
+          Object {
+            "height": 0.01,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          onLayout={[Function]}
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "paddingBottom": 4,
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                },
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              disabled={false}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "rgb(82, 76, 97)",
+                    "fontFamily": "sans-serif",
+                    "fontSize": 14,
+                    "fontWeight": "400",
+                    "lineHeight": 20,
+                  },
+                  Object {},
+                ]
+              }
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis sagittis purus, id blandit ipsum. Pellentesque nec diam nec erat condimentum dapibus. Nunc diam augue, egestas id egestas ut, facilisis nec mi. Donec et congue odio, nec laoreet est. Integer rhoncus varius arcu, a fringilla libero laoreet at.
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -2504,6 +2600,54 @@ exports[`Android BpkBannerAlert should render correctly expanded 1`] = `
         </View>
       </View>
     </View>
+    <View>
+      <View
+        collapsable={undefined}
+        style={
+          Object {
+            "height": 0.01,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          onLayout={[Function]}
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "paddingBottom": 4,
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                },
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              disabled={false}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "rgb(82, 76, 97)",
+                    "fontFamily": "sans-serif",
+                    "fontSize": 14,
+                    "fontWeight": "400",
+                    "lineHeight": 20,
+                  },
+                  Object {},
+                ]
+              }
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis sagittis purus, id blandit ipsum. Pellentesque nec diam nec erat condimentum dapibus. Nunc diam augue, egestas id egestas ut, facilisis nec mi. Donec et congue odio, nec laoreet est. Integer rhoncus varius arcu, a fringilla libero laoreet at.
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
   </View>
   <View
     style={
@@ -2654,6 +2798,54 @@ exports[`Android BpkBannerAlert should render correctly expanded 1`] = `
           >
             
           </Text>
+        </View>
+      </View>
+    </View>
+    <View>
+      <View
+        collapsable={undefined}
+        style={
+          Object {
+            "height": 0.01,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          onLayout={[Function]}
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "paddingBottom": 4,
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                },
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              disabled={false}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "rgb(82, 76, 97)",
+                    "fontFamily": "sans-serif",
+                    "fontSize": 14,
+                    "fontWeight": "400",
+                    "lineHeight": 20,
+                  },
+                  Object {},
+                ]
+              }
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis sagittis purus, id blandit ipsum. Pellentesque nec diam nec erat condimentum dapibus. Nunc diam augue, egestas id egestas ut, facilisis nec mi. Donec et congue odio, nec laoreet est. Integer rhoncus varius arcu, a fringilla libero laoreet at.
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -2815,6 +3007,54 @@ exports[`Android BpkBannerAlert should render correctly long text 1`] = `
         </View>
       </View>
     </View>
+    <View>
+      <View
+        collapsable={undefined}
+        style={
+          Object {
+            "height": 0.01,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          onLayout={[Function]}
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "paddingBottom": 4,
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                },
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              disabled={false}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "rgb(82, 76, 97)",
+                    "fontFamily": "sans-serif",
+                    "fontSize": 14,
+                    "fontWeight": "400",
+                    "lineHeight": 20,
+                  },
+                  Object {},
+                ]
+              }
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis sagittis purus, id blandit ipsum. Pellentesque nec diam nec erat condimentum dapibus. Nunc diam augue, egestas id egestas ut, facilisis nec mi. Donec et congue odio, nec laoreet est. Integer rhoncus varius arcu, a fringilla libero laoreet at.
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
   </View>
   <View
     style={
@@ -2965,6 +3205,54 @@ exports[`Android BpkBannerAlert should render correctly long text 1`] = `
           >
             
           </Text>
+        </View>
+      </View>
+    </View>
+    <View>
+      <View
+        collapsable={undefined}
+        style={
+          Object {
+            "height": 0.01,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          onLayout={[Function]}
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "paddingBottom": 4,
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                },
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              disabled={false}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "rgb(82, 76, 97)",
+                    "fontFamily": "sans-serif",
+                    "fontSize": 14,
+                    "fontWeight": "400",
+                    "lineHeight": 20,
+                  },
+                  Object {},
+                ]
+              }
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis sagittis purus, id blandit ipsum. Pellentesque nec diam nec erat condimentum dapibus. Nunc diam augue, egestas id egestas ut, facilisis nec mi. Donec et congue odio, nec laoreet est. Integer rhoncus varius arcu, a fringilla libero laoreet at.
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -3121,6 +3409,54 @@ exports[`Android BpkBannerAlert should render correctly long text 1`] = `
         </View>
       </View>
     </View>
+    <View>
+      <View
+        collapsable={undefined}
+        style={
+          Object {
+            "height": 0.01,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          onLayout={[Function]}
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "paddingBottom": 4,
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                },
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              disabled={false}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "rgb(82, 76, 97)",
+                    "fontFamily": "sans-serif",
+                    "fontSize": 14,
+                    "fontWeight": "400",
+                    "lineHeight": 20,
+                  },
+                  Object {},
+                ]
+              }
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis sagittis purus, id blandit ipsum. Pellentesque nec diam nec erat condimentum dapibus. Nunc diam augue, egestas id egestas ut, facilisis nec mi. Donec et congue odio, nec laoreet est. Integer rhoncus varius arcu, a fringilla libero laoreet at.
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
   </View>
   <View
     style={
@@ -3271,6 +3607,54 @@ exports[`Android BpkBannerAlert should render correctly long text 1`] = `
           >
             
           </Text>
+        </View>
+      </View>
+    </View>
+    <View>
+      <View
+        collapsable={undefined}
+        style={
+          Object {
+            "height": 0.01,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          onLayout={[Function]}
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "paddingBottom": 4,
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                },
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              disabled={false}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "rgb(82, 76, 97)",
+                    "fontFamily": "sans-serif",
+                    "fontSize": 14,
+                    "fontWeight": "400",
+                    "lineHeight": 20,
+                  },
+                  Object {},
+                ]
+              }
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis sagittis purus, id blandit ipsum. Pellentesque nec diam nec erat condimentum dapibus. Nunc diam augue, egestas id egestas ut, facilisis nec mi. Donec et congue odio, nec laoreet est. Integer rhoncus varius arcu, a fringilla libero laoreet at.
+            </Text>
+          </View>
         </View>
       </View>
     </View>
