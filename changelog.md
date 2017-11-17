@@ -9,7 +9,8 @@
 
 **Added:**
 - bpk-component-banner-alert:
-  - New `dismissable` configuration, see https://backpack.github.io/components/web/banner-alerts
+  - New `dismissable` configuration. See https://backpack.github.io/components/web/banner-alerts
+  - New animations available when `show` is toggled. See https://backpack.github.io/components/web/banner-alerts
 
 **Fixed:**
 - bpk-component-button:
